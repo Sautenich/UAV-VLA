@@ -1,0 +1,150 @@
+
+Results for Image 1.jpg:
+Nearest Neighbor Error (KNN): 13.443448 meters
+DTW-based Root Mean Squared Error (RMSE): 357.999289 meters
+Interpolation-based Root Mean Squared Error (RMSE): 357.668484 meters
+
+Results for Image 2.jpg:
+Nearest Neighbor Error (KNN): 30.856035 meters
+DTW-based Root Mean Squared Error (RMSE): 316.404753 meters
+Interpolation-based Root Mean Squared Error (RMSE): 327.682765 meters
+
+Results for Image 3.jpg:
+Nearest Neighbor Error (KNN): 13.729985 meters
+DTW-based Root Mean Squared Error (RMSE): 481.753579 meters
+Interpolation-based Root Mean Squared Error (RMSE): 579.769849 meters
+
+Results for Image 4.jpg:
+Nearest Neighbor Error (KNN): 23.721319 meters
+DTW-based Root Mean Squared Error (RMSE): 112.140534 meters
+Interpolation-based Root Mean Squared Error (RMSE): 175.944191 meters
+
+Results for Image 5.jpg:
+Nearest Neighbor Error (KNN): 20.948548 meters
+DTW-based Root Mean Squared Error (RMSE): 162.447269 meters
+Interpolation-based Root Mean Squared Error (RMSE): 422.531993 meters
+
+Results for Image 6.jpg:
+Nearest Neighbor Error (KNN): 18.227199 meters
+DTW-based Root Mean Squared Error (RMSE): 439.214807 meters
+Interpolation-based Root Mean Squared Error (RMSE): 544.704665 meters
+
+Results for Image 7.jpg:
+Nearest Neighbor Error (KNN): 24.628946 meters
+DTW-based Root Mean Squared Error (RMSE): 110.061006 meters
+Interpolation-based Root Mean Squared Error (RMSE): 134.342689 meters
+
+Results for Image 8.jpg:
+Nearest Neighbor Error (KNN): 35.284933 meters
+DTW-based Root Mean Squared Error (RMSE): 420.323191 meters
+Interpolation-based Root Mean Squared Error (RMSE): 423.950009 meters
+
+Results for Image 9.jpg:
+Nearest Neighbor Error (KNN): 104.371426 meters
+DTW-based Root Mean Squared Error (RMSE): 532.242384 meters
+Interpolation-based Root Mean Squared Error (RMSE): 605.198991 meters
+
+Results for Image 10.jpg:
+Nearest Neighbor Error (KNN): 51.817996 meters
+DTW-based Root Mean Squared Error (RMSE): 377.378451 meters
+Interpolation-based Root Mean Squared Error (RMSE): 606.013586 meters
+
+Results for Image 11.jpg:
+Nearest Neighbor Error (KNN): 73.121224 meters
+DTW-based Root Mean Squared Error (RMSE): 433.021266 meters
+Interpolation-based Root Mean Squared Error (RMSE): 629.752846 meters
+
+Results for Image 12.jpg:
+Nearest Neighbor Error (KNN): 58.348606 meters
+DTW-based Root Mean Squared Error (RMSE): 208.050863 meters
+Interpolation-based Root Mean Squared Error (RMSE): 340.908568 meters
+
+Results for Image 13.jpg:
+Nearest Neighbor Error (KNN): 52.412064 meters
+DTW-based Root Mean Squared Error (RMSE): 177.439020 meters
+Interpolation-based Root Mean Squared Error (RMSE): 237.243820 meters
+
+Results for Image 14.jpg:
+Nearest Neighbor Error (KNN): 112.492959 meters
+DTW-based Root Mean Squared Error (RMSE): 279.998753 meters
+Interpolation-based Root Mean Squared Error (RMSE): 372.522276 meters
+
+Results for Image 15.jpg:
+Nearest Neighbor Error (KNN): 17.951665 meters
+DTW-based Root Mean Squared Error (RMSE): 214.300680 meters
+Interpolation-based Root Mean Squared Error (RMSE): 240.965925 meters
+
+Results for Image 16.jpg:
+Nearest Neighbor Error (KNN): 46.606545 meters
+DTW-based Root Mean Squared Error (RMSE): 173.602182 meters
+Interpolation-based Root Mean Squared Error (RMSE): 301.427345 meters
+
+Results for Image 17.jpg:
+Nearest Neighbor Error (KNN): 17.469773 meters
+DTW-based Root Mean Squared Error (RMSE): 349.451594 meters
+Interpolation-based Root Mean Squared Error (RMSE): 524.524956 meters
+
+Results for Image 18.jpg:
+Nearest Neighbor Error (KNN): 19.246170 meters
+DTW-based Root Mean Squared Error (RMSE): 320.518981 meters
+Interpolation-based Root Mean Squared Error (RMSE): 438.667048 meters
+
+Results for Image 19.jpg:
+Nearest Neighbor Error (KNN): 34.564502 meters
+DTW-based Root Mean Squared Error (RMSE): 277.978965 meters
+Interpolation-based Root Mean Squared Error (RMSE): 289.921325 meters
+
+Results for Image 20.jpg:
+Nearest Neighbor Error (KNN): 17.206352 meters
+DTW-based Root Mean Squared Error (RMSE): 448.378662 meters
+Interpolation-based Root Mean Squared Error (RMSE): 715.004107 meters
+
+Results for Image 21.jpg:
+Nearest Neighbor Error (KNN): 27.298467 meters
+DTW-based Root Mean Squared Error (RMSE): 423.639449 meters
+Interpolation-based Root Mean Squared Error (RMSE): 592.243972 meters
+
+Results for Image 22.jpg:
+Nearest Neighbor Error (KNN): 9.199532 meters
+DTW-based Root Mean Squared Error (RMSE): 29.659750 meters
+Interpolation-based Root Mean Squared Error (RMSE): 152.556970 meters
+
+Results for Image 23.jpg:
+Nearest Neighbor Error (KNN): 32.377598 meters
+DTW-based Root Mean Squared Error (RMSE): 388.024373 meters
+Interpolation-based Root Mean Squared Error (RMSE): 380.146550 meters
+
+Results for Image 24.jpg:
+Nearest Neighbor Error (KNN): 27.691727 meters
+DTW-based Root Mean Squared Error (RMSE): 58.989140 meters
+Interpolation-based Root Mean Squared Error (RMSE): 169.675236 meters
+
+Results for Image 25.jpg:
+Nearest Neighbor Error (KNN): 13.354962 meters
+DTW-based Root Mean Squared Error (RMSE): 72.157856 meters
+Interpolation-based Root Mean Squared Error (RMSE): 146.644421 meters
+
+Results for Image 26.jpg:
+Nearest Neighbor Error (KNN): 16.036881 meters
+DTW-based Root Mean Squared Error (RMSE): 644.573711 meters
+Interpolation-based Root Mean Squared Error (RMSE): 727.936362 meters
+
+Results for Image 27.jpg:
+Nearest Neighbor Error (KNN): 40.654834 meters
+DTW-based Root Mean Squared Error (RMSE): 308.805571 meters
+Interpolation-based Root Mean Squared Error (RMSE): 411.039324 meters
+
+Results for Image 28.jpg:
+Nearest Neighbor Error (KNN): 26.736048 meters
+DTW-based Root Mean Squared Error (RMSE): 282.852650 meters
+Interpolation-based Root Mean Squared Error (RMSE): 356.921412 meters
+
+Results for Image 29.jpg:
+Nearest Neighbor Error (KNN): 25.355116 meters
+DTW-based Root Mean Squared Error (RMSE): 458.286054 meters
+Interpolation-based Root Mean Squared Error (RMSE): 570.140572 meters
+
+Results for Image 30.jpg:
+Nearest Neighbor Error (KNN): 21.498200 meters
+DTW-based Root Mean Squared Error (RMSE): 358.252067 meters
+Interpolation-based Root Mean Squared Error (RMSE): 510.075445 meters

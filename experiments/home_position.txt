@@ -1,0 +1,150 @@
+
+Image 1.jpg:
+  Home Position:
+    Latitude = 42.88026166666667
+    Longitude = -85.41367805555556
+
+Image 2.jpg:
+  Home Position:
+    Latitude = 43.02713694444444
+    Longitude = -85.79020777777777
+
+Image 3.jpg:
+  Home Position:
+    Latitude = 43.29900305555555
+    Longitude = -85.38324138888889
+
+Image 4.jpg:
+  Home Position:
+    Latitude = 43.12761388888889
+    Longitude = -85.37104972222222
+
+Image 5.jpg:
+  Home Position:
+    Latitude = 42.76804111111111
+    Longitude = -85.65389111111112
+
+Image 6.jpg:
+  Home Position:
+    Latitude = 43.17139805555556
+    Longitude = -85.77479444444444
+
+Image 7.jpg:
+  Home Position:
+    Latitude = 43.1374475
+    Longitude = -85.74591472222222
+
+Image 8.jpg:
+  Home Position:
+    Latitude = 42.8007925
+    Longitude = -85.78500861111111
+
+Image 9.jpg:
+  Home Position:
+    Latitude = 43.15138638888868
+    Longitude = -85.72748694444427
+
+Image 10.jpg:
+  Home Position:
+    Latitude = 43.17893339333336
+    Longitude = -85.71872
+
+Image 11.jpg:
+  Home Position:
+    Latitude = 42.856675
+    Longitude = -85.70234156561112
+
+Image 12.jpg:
+  Home Position:
+    Latitude = 42.812246944444446
+    Longitude = -85.34730194444444
+
+Image 13.jpg:
+  Home Position:
+    Latitude = 43.08998888888888
+    Longitude = -85.69804944444445
+
+Image 14.jpg:
+  Home Position:
+    Latitude = 42.80212472222222
+    Longitude = -85.67323194444445
+
+Image 15.jpg:
+  Home Position:
+    Latitude = 42.83039055555556
+    Longitude = -85.5992575
+
+Image 16.jpg:
+  Home Position:
+    Latitude = 43.269055
+    Longitude = -85.63620211109294
+
+Image 17.jpg:
+  Home Position:
+    Latitude = 42.87398055555556
+    Longitude = -85.34827888888888
+
+Image 18.jpg:
+  Home Position:
+    Latitude = 43.193713333333335
+    Longitude = -85.62529583333333
+
+Image 19.jpg:
+  Home Position:
+    Latitude = 42.830785000000006
+    Longitude = -85.56197999999999
+
+Image 20.jpg:
+  Home Position:
+    Latitude = 42.78972638888889
+    Longitude = -85.551875
+
+Image 21.jpg:
+  Home Position:
+    Latitude = 43.088864722222226
+    Longitude = -85.79163166666666
+
+Image 22.jpg:
+  Home Position:
+    Latitude = 43.21458551111111
+    Longitude = -85.59757088383333
+
+Image 23.jpg:
+  Home Position:
+    Latitude = 42.892806944444445
+    Longitude = -85.53518749999999
+
+Image 24.jpg:
+  Home Position:
+    Latitude = 42.89299583333333
+    Longitude = -85.51652944444444
+
+Image 25.jpg:
+  Home Position:
+    Latitude = 42.89487444444445
+    Longitude = -85.31128999999999
+
+Image 26.jpg:
+  Home Position:
+    Latitude = 42.791425000000004
+    Longitude = -85.3749186111111
+
+Image 27.jpg:
+  Home Position:
+    Latitude = 42.767830277777776
+    Longitude = -85.67251027777779
+
+Image 28.jpg:
+  Home Position:
+    Latitude = 43.18049861450663
+    Longitude = -85.57814015977935
+
+Image 29.jpg:
+  Home Position:
+    Latitude = 42.894066285799084
+    Longitude = -85.40458176183638
+
+Image 30.jpg:
+  Home Position:
+    Latitude = 43.2502175
+    Longitude = -85.46689666666666

@@ -1,0 +1,16 @@
+```
+arm throttle
+takeoff 100
+mode guided 42.80111180555555 -85.67221990277778 100
+mode circle
+mode guided 42.798606525 -85.67085790277778 100
+mode circle
+mode guided 42.80121309722222 -85.67076331944445 100
+mode circle
+mode guided 42.80019342777778 -85.67066873611111 100
+mode circle
+mode guided 42.80121309722222 -85.66981748611111 100
+mode circle
+mode rtl
+disarm
+```

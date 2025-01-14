@@ -1,0 +1,3 @@
+[submodule "pathPlanningonKeyPoints"]
+	path = pathPlanningonKeyPoints
+	url = https://github.com/aibekakhmetkazy/pathPlanningOnKeyPoints.git
