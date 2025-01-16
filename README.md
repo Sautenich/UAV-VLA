@@ -1,6 +1,8 @@
 # UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation
 
 ---
+[![arXiv](https://img.shields.io/badge/https://arxiv.org/abs/2501.05014-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2501.05014)
+https://arxiv.org/abs/2501.05014
 This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. on Human Robot Interaction (HRI 2025)
 
 ## Table of Contents
