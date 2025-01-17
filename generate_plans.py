@@ -80,10 +80,7 @@ example_objects = '''
 
 # 2. Step 2: Use Molmo model to find objects on the map
 def find_objects(json_input, example_objects):
-    """
-    Placeholder for SAM model to process input object types and output valid objects.
-    For now, return a dummy dictionary of identified objects.
-    """
+   
     search_string = str()
     find_objects_json_input = json_input.replace("`", "").replace("json","")    #[9::-3]
     
