@@ -28,17 +28,6 @@ def run():
 
 api_key = os.environ.get("api_key")
 
-
-#import molmo_inference
-# Initialize the ChatGPT-4 model using ChatOpenAI
-
-
-
-
-
-# load the processor
-
-
 # Insert your key here to run the program
 llm = ChatOpenAI(api_key=api_key, 
                  model_name='gpt-4o', temperature=0)
@@ -51,8 +40,6 @@ step_1_prompt = PromptTemplate(input_variables=["command"], template=step_1_temp
 
 # Instead of using RunnableSequence, we simply use pipe (|)
 step_1_chain = step_1_prompt | llm
-
-##print(step_1_chain)
 
 # 2. Step 2: Use Molmo model to find objects on the map
 def find_objects(json_input, example_objects):

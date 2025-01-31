@@ -5,9 +5,6 @@ import torch
 import os
 import csv
 
-#os.remove('Answers.txt')
-LIST_OF_ANSWERS = []
-
 NUMBER_OF_SAMPLES = len(os.listdir('benchmark-UAV-VLPA-nano-30/images'))
 print('NUMBER_OF_SAMPLES',NUMBER_OF_SAMPLES)
 
