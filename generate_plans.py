@@ -11,7 +11,6 @@ from recalculate_to_latlon import recalculate_coordinates, percentage_to_lat_lon
 from time import time
 import os
 from config import *
-#os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
 def run():
     print(torch.cuda.is_available())
@@ -24,22 +23,6 @@ def run():
     print('Time to get VLM results: ', vlm_model_time, 'mins')
     print('Time to get Mission Text files: ', mission_generation_time, 'mins')
     print('Total Computational Time: ', total_computational_time, 'mins')
-
-
-api_key = os.environ.get("api_key")
-
-# Insert your key here to run the program
-llm = ChatOpenAI(api_key=api_key, 
-                 model_name='gpt-4o', temperature=0)
-
-# 1. Step 1: Extract object types from the user's input command using the LLM
-
-
-
-step_1_prompt = PromptTemplate(input_variables=["command"], template=step_1_template)
-
-# Instead of using RunnableSequence, we simply use pipe (|)
-step_1_chain = step_1_prompt | llm
 
 # 2. Step 2: Use Molmo model to find objects on the map
 def find_objects(json_input, example_objects):
@@ -67,7 +50,6 @@ def find_objects(json_input, example_objects):
     find_objects_json_input_2 = json.loads(find_objects_json_input)
 
     for i in range(0,len(find_objects_json_input_2["object_types"])):
-        #print(find_objects_json_input_2["object_types"][i]) #Show in console the type of an object
         sample = find_objects_json_input_2["object_types"][i]
         search_string = search_string + sample ##+ ", "
 
@@ -103,10 +85,6 @@ def find_objects(json_input, example_objects):
         generated_tokens = output[0,inputs['input_ids'].size(1):]
         generated_text = processor.tokenizer.decode(generated_tokens, skip_special_tokens=True)
         
-
-        #print the generated text
-        ##print('molmo_output =', generated_text)
-
         parsed_points = parse_points(generated_text)
        
         print('\n')
@@ -126,22 +104,24 @@ def find_objects(json_input, example_objects):
         list_of_the_resulted_coordinates_percentage.append(parsed_points)
         list_of_the_resulted_coordinates_lat_lon.append(result_coordinates)
 
-
-
-    #object_types = json.loads(json_input)["object_types"]
-
     return json.dumps(result_coordinates), list_of_the_resulted_coordinates_percentage, list_of_the_resulted_coordinates_lat_lon
-
-# 3. Step 3: Generate flight plan using LLM and identified objects
-
-
-step_3_prompt = PromptTemplate(input_variables=["command", "objects"], template=step_3_template)
-step_3_chain = step_3_prompt | llm
-
 
 # Full pipeline function
 def generate_drone_mission(command):
+    # Insert your key here to run the program
+    api_key = os.environ.get("api_key")
+    llm = ChatOpenAI(api_key=api_key, 
+                 model_name='gpt-4o', temperature=0)
+
+    # 1. Step 1: Extract object types from the user's input command using the LLM
+    step_1_prompt = PromptTemplate(input_variables=["command"], template=step_1_template)
+    # Instead of using RunnableSequence, we simply use pipe (|)
+    step_1_chain = step_1_prompt | llm
+    # 3. Step 3: Generate flight plan using LLM and identified objects
+    step_3_prompt = PromptTemplate(input_variables=["command", "objects"], template=step_3_template)
+    step_3_chain = step_3_prompt | llm
     # Step 1: Extract object types
+    
     object_types_response = step_1_chain.invoke({"command": command})
     
     #print('object_types_response =', object_types_response)
@@ -158,10 +138,6 @@ def generate_drone_mission(command):
     del_t_find_objects = (t2_find_objects - t1_find_objects)/60
 
     print('length: ', len(list_of_the_resulted_coordinates_lat_lon))
-
-
-    #print('objects_json =', objects_json)
-
     
     # Step 3: Generate the flight plan
     t1_generate_drone_mission = time()
@@ -177,8 +153,7 @@ def generate_drone_mission(command):
     t2_generate_drone_mission = time()
     del_t_generate_drone_mission = (t2_generate_drone_mission - t1_generate_drone_mission)/60
 
-
     return flight_plan_response.content, del_t_find_objects, del_t_generate_drone_mission  # Return the response text from AIMessage
 
-# Example usage
-run()
+if __name__=="__main__":
+    run()

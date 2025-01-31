@@ -1,5 +1,13 @@
 NUMBER_OF_SAMPLES = 30
 
+json_data = {
+        'building_1': {'type': 'building', 'coordinates': [40.2, 39.5]},
+        'building_2': {'type': 'building', 'coordinates': [47.7, 39.0]},
+        'building_3': {'type': 'building', 'coordinates': [64.9, 41.2]},
+        'building_4': {'type': 'building', 'coordinates': [65.2, 87.9]},
+        'building_5': {'type': 'building', 'coordinates': [80.2, 20.7]}
+    }
+
 example_objects = '''
 {
         "village_1": {"type": "village", "coordinates": [1.5, 3.5]},

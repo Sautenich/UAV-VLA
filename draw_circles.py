@@ -1,6 +1,7 @@
 import json
 import os
 from PIL import Image, ImageDraw
+from config import *
 
 def draw_dots_and_lines_on_image(image_path, json_data, output_folder='identified_images', output_path='sample_pic0.jpg'):
     # Open the image
@@ -49,18 +50,10 @@ def draw_dots_and_lines_on_image(image_path, json_data, output_folder='identifie
     print(f"Image saved to {output_path}")
 
 
-
-
-if __name__=='__main__':
-
-    # Example JSON data
-    json_data = {
-        'building_1': {'type': 'building', 'coordinates': [40.2, 39.5]},
-        'building_2': {'type': 'building', 'coordinates': [47.7, 39.0]},
-        'building_3': {'type': 'building', 'coordinates': [64.9, 41.2]},
-        'building_4': {'type': 'building', 'coordinates': [65.2, 87.9]},
-        'building_5': {'type': 'building', 'coordinates': [80.2, 20.7]}
-    }
+def main():
     # Example usage
     image_path = 'new_data/1.jpg'  # Replace with your image path
     draw_dots_and_lines_on_image(image_path, json_data, output_path='output_image33.png')
+
+if __name__=='__main__':
+    main()

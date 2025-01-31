@@ -107,4 +107,3 @@ def process_images(input_folder, output_folder, coordinate_file, latlong_file, i
         output_path = os.path.join(output_folder, image_file)
         rgb_image.save(output_path, "JPEG")
         print(f"Processed and saved {image_file}")
-
