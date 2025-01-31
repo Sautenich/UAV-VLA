@@ -41,8 +41,9 @@ This repository includes:
 The images of the benchmark are stored in the folder ```benchmark-UAV-VLPA-nano-30/images```. The metadata files are ```benchmark-UAV-VLPA-nano-30/img_lat_long_data.txt``` and ```benchmark-UAV-VLPA-nano-30/parsed_coordinates.csv```.
 
 ## Installation
-
+```
 It is possible to run docker by
+```
 
 ```
 docker run --gpus all -it <imagename>
