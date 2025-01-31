@@ -53,8 +53,6 @@ def find_objects(json_input, example_objects):
         sample = find_objects_json_input_2["object_types"][i]
         search_string = search_string + sample ##+ ", "
 
-
-    #len(os.listdir('/VLM_Drone/dataset_images'))
     print('NUMBER_OF_SAMPLES',NUMBER_OF_SAMPLES )
     
     print('\n')
@@ -123,10 +121,7 @@ def generate_drone_mission(command):
     # Step 1: Extract object types
     
     object_types_response = step_1_chain.invoke({"command": command})
-    
-    #print('object_types_response =', object_types_response)
 
-    
     # Extract the text from the AIMessage object
     object_types_json = object_types_response.content  # Use 'content' to get the actual response text
 
