@@ -55,6 +55,10 @@ pip -r requirements.txt
 ```
 !12GB VRAM minimum
 
+## Export your ChatGpt api key
+```
+export api_key="your chatgpt ap_key"
+```
 
 ## Mission generation
 

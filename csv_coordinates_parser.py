@@ -1,9 +1,6 @@
 import csv
 import re
 
-import re
-import csv
-
 def parse_csv(input_data, output_filename):
     # Regex pattern to capture all required data
     pattern = r"Image: (\d+\.jpg)\s+NW Corner Lat: ([\d.-]+),\s+NW Corner Long: ([\d.-]+),\s+SE Corner Lat: ([\d.-]+),\s+SE Corner Long: ([\d.-]+)"
@@ -25,21 +22,15 @@ def parse_csv(input_data, output_filename):
 
     print(f"CSV file '{output_filename}' created successfully.")
 
+def run_parser():
+    # Example input string
+    data_string = open("benchmark-UAV-VLPA-nano-30/img_lat_long_data.txt", "r")
+    # print(data_string.read())
+    data_string = str(data_string.read()) 
+    print(data_string)
+    # Output CSV filename
+    output_filename = 'benchmark-UAV-VLPA-nano-30/parsed_coordinates.csv'
 
-
-
-
-
-# Example input string
-data_string = open("benchmark-UAV-VLPA-nano-30/img_lat_long_data.txt", "r")
-# print(data_string.read())
-data_string = str(data_string.read())
-# 
-print(data_string)
-# Output CSV filename
-output_filename = 'benchmark-UAV-VLPA-nano-30/parsed_coordinates.csv'
-
-# Run the parser
-# parse_to_csv(data_string, output_filename)
-
-parse_csv(data_string, output_filename)
+    # Run the parser
+    # parse_to_csv(data_string, output_filename)
+    parse_csv(data_string, output_filename)
