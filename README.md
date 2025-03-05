@@ -1,5 +1,7 @@
 # UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation
 
+### UPD from the authors: We are a bit surprised about the popularity of this paper, so the code and data are about to be refactored for more convenient format. Oleg 
+
 ---
 [![arXiv](https://img.shields.io/badge/https://arxiv.org/abs/2501.05014-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2501.05014)
 
