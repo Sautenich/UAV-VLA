@@ -147,7 +147,7 @@ The errors were calculated using different approaches including K-Nearest Neighb
 
 </div>
 
-## Simulation Video (Mission Planner Environment)
+## Simulation Video
 
 The generated mission from the UAV-VLA framework was tested in the ArduPilot Mission Planner. The simulation can be seen below.
 
