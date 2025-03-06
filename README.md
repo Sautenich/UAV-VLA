@@ -15,7 +15,8 @@ This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. 
 4. [Mission Generation](#mission-generation)
 5. [Path-Plans Creation](#path-plan-creation)
 6. [Experimental Results](#experimental-results)
-7. [Citation](citation)
+7. [Simulation Video](simulation-video)
+8. [Citation](citation)
 
 
 ---
