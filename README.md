@@ -15,6 +15,7 @@ This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. 
 4. [Mission Generation](#mission-generation)
 5. [Path-Plans Creation](#path-plan-creation)
 6. [Experimental Results](#experimental-results)
+7. [Citation](citation)
 
 
 ---
@@ -150,6 +151,22 @@ The errors were calculated using different approaches including K-Nearest Neighb
 The generated mission from the UAV-VLA framework was tested in the ArduPilot Mission Planner. The simulation can be seen below.
 
 https://github.com/user-attachments/assets/562f2ee7-13e5-44a0-bb0f-6c109a958123
+
+## Citation
+``` bash
+@inproceedings{10.5555/3721488.3721725,
+author = {Sautenkov, Oleg and Yaqoot, Yasheerah and Lykov, Artem and Mustafa, Muhammad Ahsan and Tadevosyan, Grik and Akhmetkazy, Aibek and Altamirano Cabrera, Miguel and Martynov, Mikhail and Karaf, Sausar and Tsetserukou, Dzmitry},
+title = {UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation},
+year = {2025},
+publisher = {IEEE Press},
+abstract = {The UAV-VLA (Visual-Language-Action) system is a tool designed to facilitate communication with aerial robots. By integrating satellite imagery processing with the Visual Language Model (VLM) and the powerful capabilities of GPT, UAV-VLA enables users to generate general flight paths-and-action plans through simple text requests. This system leverages the rich contextual information provided by satellite images, allowing for enhanced decision-making and mission planning. The combination of visual analysis by VLM and natural language processing by GPT can provide the user with the path-and-action set, making aerial operations more efficient and accessible. The newly developed method showed the difference in the length of the created trajectory in 22\% and the mean error in finding the objects of interest on a map in 34.22 m by Euclidean distance in the K-Nearest Neighbors (KNN) approach. Additionally, the UAV-VLA system generates all flight plans in just 5 minutes and 24 seconds, making it 6.5 times faster than an experienced human operator.},
+booktitle = {Proceedings of the 2025 ACM/IEEE International Conference on Human-Robot Interaction},
+pages = {1588–1592},
+numpages = {5},
+keywords = {drone, llm-agents, navigation, path planning, uav, vla, vlm, vlm-agents},
+location = {Melbourne, Australia},
+series = {HRI '25}
+}
 
 
 
