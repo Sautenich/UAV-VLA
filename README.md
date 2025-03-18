@@ -5,9 +5,6 @@
 
 ---
 [![arXiv](https://img.shields.io/badge/https://arxiv.org/abs/2501.05014-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2501.05014)
-https://img.shields.io/badge/https%3A%2F%2Farxiv.org%2Fabs%2F2503.02454-Paper
-
-
 
 This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. on Human Robot Interaction (HRI 2025)
 
@@ -24,18 +21,24 @@ This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. 
 
 ---
 ## Abstract
-The UAV-VLPA* (Visual-Language-Planning-and-Action) system represents a cutting-edge advancement in aerial robotics, designed to enhance communication and operational efficiency for unmanned aerial vehicles (UAVs). By integrating advanced planning capabilities, the system addresses the Traveling Salesman Problem (TSP) to optimize flight paths, reducing the total trajectory length by 18.5% compared to traditional methods. Additionally, the incorporation of the A* algorithm enables robust obstacle avoidance, ensuring safe and efficient navigation in complex environments. The system leverages satellite imagery processing combined with the Visual Language Model (VLM) and GPT’s natural language processing capabilities, allowing users to generate detailed flight plans through simple text commands.
-This seamless fusion of visual and linguistic analysis empowers precise decision-making and mission planning, making UAV-VLPA* a transformative tool for modern aerial operations. With its unmatched operational efficiency, navigational safety, and user-friendly functionality, UAV-VLPA* sets a new standard in autonomous aerial robotics, paving the way for future innovations in the field.
+The UAV-VLA (Visual-Language-Action) system is a tool designed to facilitate communication with aerial robots. 
+By integrating satellite imagery processing with the Visual Language Model (VLM) and the powerful capabilities of GPT, UAV-VLA enables users to generate general flight paths-and-action plans through simple text requests. 
+This system leverages the rich contextual information provided by satellite images, allowing for enhanced decision-making and mission planning. 
+The combination of visual analysis by VLM and natural language processing by GPT can provide the user with the path-and-action set, making aerial operations more efficient and accessible. The newly developed method showed the difference in the length of the created trajectory in 22\% and the mean error in finding the objects of interest on a map in 34.22 m by Euclidean distance in the K-Nearest Neighbors (KNN) approach.
+
+https://arxiv.org/abs/2501.05014
 
 
 
 This repository includes:
-- The implementation of the UAV-VLPA framework.
+- The implementation of the UAV-VLA framework.
+- Dataset and benchmark details.
+- Code for simulation-based experiments in Mission Planner.
 
-### UAV-VLPA Framework
+### UAV-VLA Framework
 
 <div align="center">
-  <img src="![image](https://github.com/user-attachments/assets/2a8a3560-9a66-4721-a5aa-be5dbb8a8940)" alt="UAV_VLPA_Title_image" width="400"/>
+  <img src="https://github.com/user-attachments/assets/b2e92daf-b21b-47b8-ab38-3e20ac6b18e6" alt="UAV_VLA_Title_image" width="400"/>
 </div>
 
 ## Benchmark
@@ -44,6 +47,11 @@ The images of the benchmark are stored in the folder ```benchmark-UAV-VLPA-nano-
 
 ## Installation
 
+It is possible to run docker by
+
+```
+docker run --gpus all -it <imagename>
+```
 
 To install requirements, run 
 
@@ -77,7 +85,7 @@ python3 run_vlm.py
 Some examples of the path generated can be seen below:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/aa7595f3-9961-439f-8e05-36877cfee6cb" alt="examples_path_generated" width="600"/>
+  <img src="https://github.com/user-attachments/assets/386f7e78-83aa-4915-aa33-ec7fbdc6dd40" alt="examples_path_generated" width="600"/>
 </div>
 
 ## Experimental Results
