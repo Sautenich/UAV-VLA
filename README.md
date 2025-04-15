@@ -48,11 +48,6 @@ The images of the benchmark are stored in the folder ```benchmark-UAV-VLPA-nano-
 
 ## Installation
 
-It is possible to run docker by
-
-```
-docker run --gpus all -it <imagename>
-```
 
 To install requirements, run 
 
