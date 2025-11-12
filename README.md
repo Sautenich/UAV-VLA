@@ -1,8 +1,7 @@
 # UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation
 
-##### UPD from the authors: Check the new paper. The code and training data of the new paper will be released soon!
 
-#### UPD2: Instead of fixing bugs and repo for Late Breaking Report paper, I'm currently working on the concise well documentedcode integrated with ROS. Please, wait for the updates, the new link will be here soon.
+#### UPD: Instead of fixing bugs and repo for Late Breaking Report paper, I'm currently working on the concise well documentedcode integrated with ROS. Please, wait for the updates, the new link will be here soon.
 https://github.com/Sautenich/UAV-CodeAgents
 
 ##### Oleg 
