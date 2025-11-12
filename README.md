@@ -2,8 +2,6 @@
 
 
 #### UPD: Instead of fixing bugs and repo for Late Breaking Report paper, I'm currently working on the concise well documented code integrated with ROS. Please, wait for the updates, the new link will be here soon.
-https://github.com/Sautenich/UAV-CodeAgents
-
 ##### Oleg 
 
 ---
