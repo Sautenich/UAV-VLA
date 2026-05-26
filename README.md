@@ -1,7 +1,5 @@
 # UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation
 
-#### UPD: Instead of fixing bugs and repo for Late Breaking Report paper, I'm currently working on the concise well documented code integrated with ROS. Please, wait for the updates, the new link will be here soon.
-##### Oleg 
 
 ---
 [![arXiv](https://img.shields.io/badge/https://arxiv.org/abs/2501.05014-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2501.05014)
@@ -22,9 +20,9 @@ This repository is for the research paper accepted in Proc. ACM/IEEE Int. Conf. 
 ---
 ## Abstract
 The UAV-VLA (Visual-Language-Action) system is a tool designed to facilitate communication with aerial robots. 
-By integrating satellite imagery processing with the Visual Language Model (VLM) and the powerful capabilities of GPT, UAV-VLA enables users to generate general flight paths-and-action plans through simple text requests. 
+By integrating satellite imagery processing with Gemini multimodal models, UAV-VLA enables users to generate general flight paths-and-action plans through simple text requests. 
 This system leverages the rich contextual information provided by satellite images, allowing for enhanced decision-making and mission planning. 
-The combination of visual analysis by VLM and natural language processing by GPT can provide the user with the path-and-action set, making aerial operations more efficient and accessible. The newly developed method showed the difference in the length of the created trajectory in 22\% and the mean error in finding the objects of interest on a map in 34.22 m by Euclidean distance in the K-Nearest Neighbors (KNN) approach.
+The current implementation uses Gemini both for visual object localization on satellite images and for natural-language mission generation. The original benchmark results showed the difference in the length of the created trajectory in 22\% and the mean error in finding the objects of interest on a map in 34.22 m by Euclidean distance in the K-Nearest Neighbors (KNN) approach.
 
 https://arxiv.org/abs/2501.05014
 
@@ -33,17 +31,19 @@ https://arxiv.org/abs/2501.05014
 This repository includes:
 - The implementation of the UAV-VLA framework.
 - Dataset and benchmark details.
-- Code for simulation-based experiments in Mission Planner.
+- Archived code and artifacts for simulation-based experiments in Mission Planner.
 
 ### UAV-VLA Framework
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b2e92daf-b21b-47b8-ab38-3e20ac6b18e6" alt="UAV_VLA_Title_image" width="400"/>
+  <img src="https://raw.githubusercontent.com/Sautenich/UAV-VLA/refs/heads/refactored/uavplanner.png" alt="UAV_VLA_Title_image" width="400"/>
 </div>
 
 ## Benchmark
 
-The images of the benchmark are stored in the folder ```benchmark-UAV-VLPA-nano-30/images```. The metadata files are ```benchmark-UAV-VLPA-nano-30/img_lat_long_data.txt``` and ```benchmark-UAV-VLPA-nano-30/parsed_coordinates.csv```.
+The images of the benchmark are stored in the folder ```benchmark-UAV-VLPA-nano-30/images```. The metadata file used by the current pipeline is ```benchmark-UAV-VLPA-nano-30/parsed_coordinates.csv```, which stores image corner coordinates for converting image-percentage points to latitude/longitude.
+
+Additional historical Mission Planner and experiment files are stored in ```archive/```.
 
 ## Installation
 
@@ -53,29 +53,56 @@ To install requirements, run
 ```
 pip install -r requirements.txt
 ```
-!12GB VRAM minimum
 
-## Export your ChatGpt api key
+The current Gemini-based pipeline runs through an API and does not require a local GPU. The archived Molmo-based legacy pipeline required a CUDA GPU with substantial VRAM.
+
+## Export your Gemini API key
 ```
-export api_key="your chatgpt ap_key"
+export GEMINI_API_KEY="your gemini api_key"
+```
+
+Alternatively, create a local ```.env``` file in the repository root:
+```
+GEMINI_API_KEY="your gemini api_key"
+GEMINI_MODEL="gemini-2.5-flash"
+NUMBER_OF_SAMPLES=30
+GEMINI_MAX_RETRIES=5
+GEMINI_RETRY_DELAY_SECONDS=10
+GEMINI_SAMPLE_DELAY_SECONDS=5
 ```
 
 ## Mission generation
 
-To generate commands for UAV add your API key for ChatGPT in the generate_plans.py, then run
+To generate commands for UAV, add your Gemini API key to the environment or to a local ```.env``` file, then run:
 ```
 python3 generate_plans.py
 ```
-It will produce the commands and store the text files in the folder ```/created_missions``` and visualizations of the identified points on the benchmark images in the folder ```/identified_new_data```.
 
-As a result of this script, you will also find the total computational time time of the UAV-VLA system which is approximately **5 minutes and 24 seconds**.
+The script will:
+- extract building-like object types from the mission command;
+- send benchmark satellite images to Gemini Vision for object localization;
+- convert Gemini image-percentage coordinates to latitude/longitude;
+- save annotated images to ```identified_new_data/```;
+- generate mission command files in ```created_missions/```.
+
+To run the full pipeline for only one image, pass the image filename:
+```
+python3 generate_plans.py 1.jpg
+```
 
 ## Path-Plans Creation
 
-To see the results of VLM on the benchmark, run
+The current path-plan creation is part of ```generate_plans.py```. It produces pseudo-language UAV mission files in ```created_missions/```, for example:
 ```
-python3 run_vlm.py
+arm throttle
+takeoff 100
+mode guided 42.87946931666667 -85.4114592638889 100
+mode circle
+mode rtl
+disarm
 ```
+
+The old local Molmo VLM runner has been moved to ```archive/legacy_molmo/```.
 
 Some examples of the path generated can be seen below:
 
@@ -85,12 +112,14 @@ Some examples of the path generated can be seen below:
 
 ## Experimental Results
 
-To view the experimental results, you need to run the main.py script. This script automates the entire process of generating coordinates, calculating trajectory lengths, and producing visualizations.
+The original experimental pipeline and generated artifacts are stored in ```archive/experiments/```. This code was used to compare VLM-generated coordinates with Mission Planner data, calculate trajectory lengths, calculate RMSE metrics, and produce visualizations.
 
-Navigate into the folder ```experiments/```, run:
+If you want to inspect or rerun the archived experiment code, navigate into the folder ```archive/experiments/```, then run:
 ```
 python3 main.py
 ```
+
+Note: the archived experiment runner expects the historical VLM output file ```identified_points.txt```. The current Gemini pipeline does not generate that file by default; it writes annotated images to ```identified_new_data/``` and missions to ```created_missions/```.
 
 ### What Happens When You run main.py:
 
@@ -108,7 +137,7 @@ python3 main.py
 
 - Generate Identified Images:
 The script generates images by overlaying the VLM and Mission Planner (human-generated) coordinates on the original images from the dataset.
-These identified images are saved in ```identified_images_VLM/``` (for VLM outputs) and ```identified_images_mp/``` (for Mission Planner outputs).
+These identified images are saved in ```archive/experiments/identified_images_VLM/``` (for VLM outputs) and ```archive/identified_images_mp/``` (for Mission Planner outputs).
 
 After running the script, you will be able to examine:
 
@@ -163,6 +192,4 @@ keywords = {drone, llm-agents, navigation, path planning, uav, vla, vlm, vlm-age
 location = {Melbourne, Australia},
 series = {HRI '25}
 }
-
-
-
+```

@@ -114,10 +114,14 @@ def recalculate_coordinates(
     """
     try:
         # Get corner coordinates for the specified image
-        if str(image_number) not in coordinates_dict:
+        image_key = str(image_number)
+        if image_key not in coordinates_dict and f"{image_key}.jpg" in coordinates_dict:
+            image_key = f"{image_key}.jpg"
+
+        if image_key not in coordinates_dict:
             raise KeyError(f"Image number {image_number} not found in coordinates dictionary")
             
-        nw_lat, nw_lon, se_lat, se_lon = coordinates_dict[str(image_number)]
+        nw_lat, nw_lon, se_lat, se_lon = coordinates_dict[image_key]
         
         # Initialize output dictionary
         result_coordinates = {}
