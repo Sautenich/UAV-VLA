@@ -1,7 +1,5 @@
 # UAV-VLA: Vision-Language-Action System for Large Scale Aerial Mission Generation
 
-#### UPD: Instead of fixing bugs and repo for Late Breaking Report paper, I'm currently working on the concise well documented code integrated with ROS. Please, wait for the updates, the new link will be here soon.
-##### Oleg 
 
 ---
 [![arXiv](https://img.shields.io/badge/https://arxiv.org/abs/2501.05014-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2501.05014)
