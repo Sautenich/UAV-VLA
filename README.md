@@ -38,7 +38,7 @@ This repository includes:
 ### UAV-VLA Framework
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b2e92daf-b21b-47b8-ab38-3e20ac6b18e6" alt="UAV_VLA_Title_image" width="400"/>
+  <img src="https://raw.githubusercontent.com/Sautenich/UAV-VLA/refs/heads/refactored/uavplanner.png" alt="UAV_VLA_Title_image" width="400"/>
 </div>
 
 ## Benchmark
