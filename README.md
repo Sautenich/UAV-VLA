@@ -55,14 +55,14 @@ pip install -r requirements.txt
 ```
 !12GB VRAM minimum
 
-## Export your ChatGpt api key
+## Export your Gemini API key
 ```
-export api_key="your chatgpt ap_key"
+export GEMINI_API_KEY="your gemini api_key"
 ```
 
 ## Mission generation
 
-To generate commands for UAV add your API key for ChatGPT in the generate_plans.py, then run
+To generate commands for UAV add your Gemini API key to the environment or to a local `.env` file, then run
 ```
 python3 generate_plans.py
 ```
@@ -163,6 +163,5 @@ keywords = {drone, llm-agents, navigation, path planning, uav, vla, vlm, vlm-age
 location = {Melbourne, Australia},
 series = {HRI '25}
 }
-
 
 
