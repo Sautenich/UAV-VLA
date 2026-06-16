@@ -148,13 +148,13 @@ After running the script, you will be able to examine:
 ### Trajectory Bar Chart:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/e27a0c86-e54a-433a-822c-dc68297fdd37" alt="traj_bar_chart" width="600"/>
+  <img width="800"alt="traj_bar_chart" src="https://github.com/user-attachments/assets/5a701ef3-5cfc-4b47-94d6-7866a14077a8" />
 </div>
 
 ### Error Box Plot:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/52f9afcf-ba3f-4cc2-bb37-bf48475a077b" alt="error_box_plot" width="500"/>
+  <img width="500"alt="error_boxplot" src="https://github.com/user-attachments/assets/619ac3d2-c354-4925-8036-b89e69cba34e" />
 </div>
 
 ### Error Comparison Table:
@@ -163,11 +163,11 @@ The errors were calculated using different approaches including K-Nearest Neighb
 
 <div align="center">
 
-|    | Metric   |   KNN Error (m) |   DTW RMSE (m) |   Interpolation RMSE (m) |
-|----|----------|-----------------|----------------|--------------------------|
-|  1 | Mean     |     34.2218     |    307.265     |              409.538     |
-|  2 | Median   |     26.0456     |    318.462     |              395.593     |
-|  3 | Max      |    112.493      |    644.574     |              727.936     |
+|   # | Metric | KNN Error (m) | DTW RMSE (m) | Interpolation RMSE (m) |
+|-----|--------|---------------|--------------|------------------------|
+|   1 | Mean   |     45.91     |    291.94    |           403.03       |
+|   2 | Median |     30.26     |    279.58    |           376.55       |
+|   3 | Max    |    299.04     |    711.40    |           738.07       |
 
 </div>
 
